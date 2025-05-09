@@ -7,7 +7,7 @@ public class ExperienceLevelRepository : IExperienceLevelRepository
 {
     private readonly string _connString;
     public ExperienceLevelRepository(IConfiguration config) => 
-        _connString = config.GetConnectionString("TavernSystemDb");
+        _connString = config.GetConnectionString("ConnectionString");
 
     public async Task<ExperienceLevel?> GetByIdAsync(int id)
     {

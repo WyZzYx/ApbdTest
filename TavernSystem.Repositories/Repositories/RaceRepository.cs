@@ -7,7 +7,7 @@ public class RaceRepository : IRaceRepository
 {
     private readonly string _connString;
     public RaceRepository(IConfiguration config) => 
-        _connString = config.GetConnectionString("TavernSystemDb");
+        _connString = config.GetConnectionString("ConnectionString");
 
     public async Task<Race?> GetByIdAsync(int id)
     {

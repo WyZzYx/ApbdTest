@@ -7,7 +7,7 @@ public class PersonDataRepository : IPersonDataRepository
 {
     private readonly string _connString;
     public PersonDataRepository(IConfiguration config) => 
-        _connString = config.GetConnectionString("TavernSystemDb");
+        _connString = config.GetConnectionString("ConnectionString");
 
     public async Task<PersonData?> GetByIdAsync(string id)
     {

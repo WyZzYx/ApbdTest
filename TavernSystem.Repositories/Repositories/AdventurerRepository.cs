@@ -11,7 +11,7 @@ public class AdventurerRepository : IAdventurerRepository
         private readonly string _connString;
         public AdventurerRepository(IConfiguration config)
         {
-            _connString = config.GetConnectionString("TavernSystemDb");
+            _connString = config.GetConnectionString("ConnectionString");
         }
 
         public async Task<IEnumerable<Adventurer>> GetAllAsync()
